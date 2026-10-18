@@ -1,5 +1,8 @@
-# Update x.x.x
-
+# Update 0.x.x.x
+### Stanze:
+- + Stanza Lore [425-450]
+- + Stanza Puzzle [425-450]
+- + Stanza Chiave [425-450]
 ### Altro:
 - + Suoni ambient nella stanza lore della cantina
 - + Suono per l'ostacolo camino nella sezioni [100-125]
@@ -7,6 +10,8 @@
 - = Cambiato suono stufa stanza 100
 - = Rifatta la Console
 ### BugTolti:
+- Nella stanza salvataggio a pagamento [400-425] mancava il collisore
+- Nella stanza di bollet mancava la porta di ingresso
 - Musica del primo piano Rimessa.
 - Il suono della stufa nella stanza 100 non si sentiva
 - Nelle descrizione degli item compare scritto "ABILITA" (sono passive)
