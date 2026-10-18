@@ -7,6 +7,7 @@
 - + Suoni ambient nella stanza lore della cantina
 - + Suono per l'ostacolo camino nella sezioni [100-125]
 - + Aggiunto comando per aggiungere item
+- = Versoning cambiato x.y.z => x.y.z.w
 - = Cambiato suono stufa stanza 100
 - = Rifatta la Console
 ### BugTolti:
