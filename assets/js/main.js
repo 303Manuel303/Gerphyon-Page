@@ -1,3 +1,5 @@
+const EN=document.documentElement.lang==='en';
+
 document.addEventListener('DOMContentLoaded',()=>{
   const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -9,7 +11,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   // torna su
   const toTop=document.createElement('button');
-  toTop.className='to-top'; toTop.type='button'; toTop.setAttribute('aria-label','Torna su');
+  toTop.className='to-top'; toTop.type='button'; toTop.setAttribute('aria-label',EN?'Back to top':'Torna su');
   toTop.innerHTML='<span class="px-chev" aria-hidden="true"></span>';
   document.body.appendChild(toTop);
   toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:reduceMotion?'auto':'smooth'}));
@@ -18,7 +20,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   // menu mobile
   const toggle=document.querySelector('.nav-toggle'); const nav=document.querySelector('#site-nav');
   if(toggle && nav){
-    const setOpen=(open)=>{ toggle.setAttribute('aria-expanded',String(open)); toggle.setAttribute('aria-label',open?'Chiudi menu':'Apri menu'); nav.classList.toggle('is-open',open); };
+    const setOpen=(open)=>{ toggle.setAttribute('aria-expanded',String(open)); toggle.setAttribute('aria-label',open?(EN?'Close menu':'Chiudi menu'):(EN?'Open menu':'Apri menu')); nav.classList.toggle('is-open',open); };
     toggle.addEventListener('click',()=>setOpen(toggle.getAttribute('aria-expanded')!=='true'));
     document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') setOpen(false); });
     document.addEventListener('click',(e)=>{ if(!e.target.closest('.site-header')) setOpen(false); });

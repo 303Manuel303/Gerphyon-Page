@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#0b0807"/>
+  <title>GERPHYON</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="../assets/js/lang.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap"/>
+  <link rel="preload" href="../assets/fonts/GERPHYON.ttf" as="font" type="font/ttf" crossorigin/>
+  <link rel="stylesheet" href="../assets/css/styles.css"/>
+  <link rel="icon" href="../assets/img/Logo64x64.png" type="image/png"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="./index.html" aria-label="GERPHYON — Home">
+      <img src="../assets/img/Logo64x64.png" alt="" width="64" height="64"/>
+      <span class="brand-title">GERPHYON</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="./index.html">HOME</a>
+      <a href="./versions.html">CHANGELOG</a>
+      <a href="./blog.html" aria-current="page">BLOG</a>
+      <a href="./credits.html">CREDITS</a>
+      <a href="../blog-post.html" hreflang="it" lang="it" data-lang="it" aria-label="Versione italiana">IT</a>
+      <a class="btn btn-sm" href="https://store.steampowered.com/app/4841430/GERPHYON_The_Ender_Mansion/" target="_blank" rel="noopener">WISHLIST</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-hero">
+  <div class="eyes" data-eyes="3" data-eyes-area="right" aria-hidden="true"></div>
+  <div class="container">
+    <span class="kicker">Blog</span>
+    <h1><span id="post-title">Loading…</span></h1>
+  </div>
+</section>
+<div class="cornice" aria-hidden="true"></div>
+<section class="section section-grid">
+  <div class="container" id="post-container">
+    <article class="card article">
+      <a class="back-link" href="./blog.html"><span class="px-chev" aria-hidden="true"></span> Back to the blog</a>
+      <div id="post-md" class="prose">Loading content…</div>
+    </article>
+  </div>
+</section>
+</main>
+
+<div class="cornice" aria-hidden="true"></div>
+<footer class="site-footer">
+  <div class="eyes" data-eyes="5" aria-hidden="true"></div>
+  <div class="container footer-inner">
+    <a class="footer-brand" href="./index.html" aria-label="GERPHYON — Home">
+      <img src="../assets/img/Logo64x64.png" alt="" width="64" height="64"/>
+      <span class="brand-title">GERPHYON</span>
+    </a>
+    <p class="footer-tagline">Something is watching you.</p>
+    <nav class="footer-links" aria-label="Secondary">
+      <a href="./index.html">Home</a>
+      <a href="./versions.html">Changelog</a>
+      <a href="./blog.html">Blog</a>
+      <a href="./credits.html">Credits</a>
+    </nav>
+    <a href="https://discord.gg/F6qgCj7XM7" class="btn btn-blood discord">
+      <svg class="discord-icon" viewBox="0 0 8 8" aria-hidden="true" shape-rendering="crispEdges"><path fill="currentColor" fill-rule="evenodd" d="M1 1h6v1h1v3H7v1H4v1H3v1H2V6H1V5H0V2h1zM2 3v1h1V3zm3 0v1h1V3z"/></svg>
+      Join our Discord
+    </a>
+    <p class="copyright">© <span id="year"></span> GERPHYON</p>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+
+<script type="module" src="../post.js"></script>
+</body>
+</html>

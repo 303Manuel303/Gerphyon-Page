@@ -1,10 +1,12 @@
+const EN = document.documentElement.lang === 'en';
+
 export async function renderMarkdownInto(selector, mdUrl) {
   const container = document.querySelector(selector); if (!container) return;
   try {
-    const res = await fetch(mdUrl); if (!res.ok) throw new Error('Impossibile caricare: ' + mdUrl);
+    const res = await fetch(mdUrl); if (!res.ok) throw new Error((EN ? 'Unable to load: ' : 'Impossibile caricare: ') + mdUrl);
     container.innerHTML = markdownToHtml(await res.text());
   } catch(err) {
-    container.innerHTML = `<div class="card">Errore nel caricamento del contenuto: ${err.message}</div>`;
+    container.innerHTML = `<div class="card">${EN ? 'Error loading content' : 'Errore nel caricamento del contenuto'}: ${err.message}</div>`;
   }
 }
 

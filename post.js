@@ -1,3 +1,4 @@
 import { renderMarkdownInto } from './assets/js/md-loader.js';
+const EN=document.documentElement.lang==='en';
 function getParam(name){ const u=new URL(window.location.href); return u.searchParams.get(name); }
-document.addEventListener('DOMContentLoaded', ()=>{ const file=getParam('post'); const titleEl=document.querySelector('#post-title'); const target='#post-md'; if(!file){ document.querySelector('#post-container').innerHTML='<div class="card">Post non specificato.</div>'; return; } titleEl.textContent = decodeURIComponent(file); renderMarkdownInto(target, `./blogs/${file}`); });
+document.addEventListener('DOMContentLoaded', ()=>{ const file=getParam('post'); const titleEl=document.querySelector('#post-title'); const target='#post-md'; if(!file){ document.querySelector('#post-container').innerHTML=`<div class="card">${EN?'No post specified.':'Post non specificato.'}</div>`; return; } titleEl.textContent = decodeURIComponent(file); renderMarkdownInto(target, `./blogs/${file}`); });

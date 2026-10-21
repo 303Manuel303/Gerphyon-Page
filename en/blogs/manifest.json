@@ -1,0 +1,24 @@
+{
+  "blogs": [
+    {
+      "file": "benvenuto-nella-magione.md",
+      "title": "Welcome to the Mansion",
+      "date": "2026-02-01",
+      "tags": [
+        "devlog",
+        "horror"
+      ],
+      "image": "../assets/img/slide2.png"
+    },
+    {
+      "file": "dietro-le-quinte-ia.md",
+      "title": "Behind the scenes: the AI",
+      "date": "2026-02-18",
+      "tags": [
+        "ai",
+        "gameplay"
+      ],
+      "image": "../assets/img/slide3.png"
+    }
+  ]
+}
