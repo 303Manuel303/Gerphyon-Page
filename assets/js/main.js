@@ -46,6 +46,13 @@ document.addEventListener('DOMContentLoaded',()=>{
     }).catch(()=>{});
   }
 
+  // video in loop: si carica e parte solo quando è visibile; con movimento ridotto si avvia a mano
+  document.querySelectorAll('video[data-autoplay]').forEach(v=>{
+    if(reduceMotion){ v.controls=true; return; }
+    if(!('IntersectionObserver' in window)){ v.play().catch(()=>{}); return; }
+    new IntersectionObserver(([en])=>{ if(en.isIntersecting) v.play().catch(()=>{}); else v.pause(); },{rootMargin:'200px 0px'}).observe(v);
+  });
+
   if(!reduceMotion) document.querySelectorAll('[data-eyes]').forEach(spawnEyes);
 });
 
